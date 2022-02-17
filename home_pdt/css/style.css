@@ -1,0 +1,393 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    /* Paleta de cores */
+    --light: #E9ECEF;
+    --grey: rgba(255, 255, 255, 0.548);
+    --lightgrey: #E8E8E8;
+    --cyan: #54CC94;
+    --lightblue: #1672db;
+    --blue: #1454a8;
+    --darkblue: #182944;
+    --dark: rgb(2, 2, 29);
+    --red: #D62516;
+    --orange: #ff0000;
+    /* fonts */
+    --lato: 'Lato', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* header selectors */
+
+header {
+    background-color: var(--darkblue);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+nav {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    margin: auto;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    display: flex;
+}
+
+ul a {
+    text-decoration: none;
+    transition-duration: 0.15s;
+    color: var(--grey);
+    padding: 23px;
+}
+
+a:hover {
+    color: white;
+}
+
+#signup {
+    color: var(--light);
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.15s;
+}
+
+#signup:hover {
+    color: white;
+}
+
+
+/* MAIN SELECTORS */
+
+main {
+    font-family: var(--montserrat);
+}
+
+hr {
+    background-color: #fff;
+    border: none;
+    height: 0;
+    opacity: 0.35;
+    height: 0.5px;
+    margin: 12px 12px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+i {
+    padding-right: 13px;
+}
+
+label {
+    display: flex;
+    margin-bottom: 4px;
+}
+
+form button {
+    background-color: var(--red);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 7px;
+    padding: 10px 12px;
+    font-family: var(--lato);
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition-duration: 0.5s;
+}
+
+form button:hover {
+    background-color: var(--orange);
+}
+
+.input {
+    flex-grow: 1;
+    font-size: 16px;
+    width: 70px;
+    border-radius: 0px 5px 5px 0px;
+    padding: 6px 12px;
+    border: 1px solid;
+    border-color: #ced4da;
+}
+
+.dark {
+    display: flex;
+    justify-content: center;
+    padding: 100px 300px;
+    align-items: start;
+    background-color: var(--darkblue);
+    color: white;
+}
+
+.light {
+    padding: 48px 0px;
+}
+
+.grey {
+    background-color: var(--lightgrey);
+    padding: 48px 0px;
+}
+
+.transition {
+    padding: 0 15px;
+    height: 96px;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 555px;
+    max-width: 570px;
+    padding: 0px 15px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 555px;
+    max-width: 570px;
+    text-align: right;
+    padding: 0px 15px;
+}
+
+.line {
+    color: var(--light);
+}
+
+.leftText {
+    max-width: 540px;
+    padding: 0px 15px;
+    flex-grow: 1;
+}
+
+.rightText {
+    font-family: var(--lato);
+    max-width: 540px;
+    padding: 0px 15px;
+    flex-grow: 1;
+}
+
+.labelForm {
+    display: block;
+    background-color: var(--light);
+    color: #000000;
+    width: 45px;
+    padding: 10px 16px;
+    border: 1px solid;
+    border-color: #ced4da;
+    border-radius: 0.25rem;
+}
+
+.smallTitle {
+    padding: 24px 0px;
+}
+
+.smallTitle h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    font-family: var(--montserrat);
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.smallDescription {
+    margin-bottom: 16px;
+}
+
+.smallDescription p {
+    font-family: var(--lato);
+    font-size: 19px;
+    margin-bottom: 16px;
+}
+
+.cite {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+.identity {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 8px;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--lato);
+} 
+
+.identity img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+.name {
+    font-family: var(--lato);
+    font-size: 16px;
+}
+
+.cite blockquote {
+    padding: 4px 0px 4px 16px;
+    line-height: 1.5;
+    font-family: var(--lato);
+    font-size: 16px;
+    font-style: italic;
+}
+
+.smallText {
+    margin-bottom: 16px;
+}
+
+.simpleDiv {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.descriptionButton {  
+    color: white;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 16px;
+    font-family: var(--montserrat);
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+#learn {
+    background-color: var(--darkblue);
+    transition-duration: 0.15s;
+}
+
+#buy {
+    background-color: var(--orange);
+    transition-duration: 0.15s;
+}
+
+#learn:hover {
+    background-color: var(--dark);
+}
+
+#buy:hover {
+    background-color: var(--red);
+}
+
+.simpleLink {
+    text-decoration: underline;
+}
+
+#lostPassword {
+    margin-bottom: 25px;
+}
+
+#welcome {
+    font-size: 20px;
+}
+
+#mainTitle {
+    color:white;
+    font-family: var(--montserrat);
+    font-size: 64px;
+    font-weight: lighter;
+    margin-bottom: 16px;
+}
+
+#traders {
+    color: var(--cyan);
+    font-weight: bold;
+}
+
+#mainParagraph {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+#access {
+    align-items: center;
+}
+
+#access a {
+    color: white;
+    border-radius: 2px;
+    font-family: var(--lato);
+    text-align: center;
+}
+
+#access p {
+    text-align: center;
+}
+
+#facebook {
+    background-color: var(--lightblue);
+    margin-right: 3px;
+    transition-duration: 0.5s;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+#facebook:hover {
+    background-color: var(--blue);
+    text-decoration: underline;
+}
+
+#google {
+    background-color: var(--orange);
+    margin-left: 3px;
+    transition-duration: 0.5s;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#google:hover {
+    background-color: var(--red);
+    text-decoration: underline;
+}
+
+#optionalContent {
+    margin: none;
+    font-size: 24px;
+    font-family: var(--lato);
+    font-weight: normal;
+    text-align: center;
+}
+
+#medias {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#medias a {
+    flex-grow: 1;
+    padding: 10px 12px;
+}
+
