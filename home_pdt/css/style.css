@@ -33,17 +33,17 @@ header {
 }
 
 nav {
-    padding: 8px 16px;
     display: flex;
+    padding: 8px 16px;
     align-items: center;
+    justify-content: center;
 }
 
 ul {
-    margin: auto;
+    display: flex;
     align-items: center;
     list-style: none;
-    justify-content: center;
-    display: flex;
+    justify-content: space-around;
 }
 
 ul a {
@@ -57,8 +57,48 @@ a:hover {
     color: white;
 }
 
+.links {
+    display: flex;
+}
+
+.linkBox {
+    display: flex;
+}
+
+.nav {
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+.secondForm {
+    display: none;
+}
+
+.hamburger {
+    cursor: pointer;
+    background-color: var(--darkblue);
+    height: 40px;
+    border: rgba(128, 128, 128, 0.534) solid 1px;
+    border-radius: 3px;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    display: none;
+}
+
+.hamburger div {
+    width: 32px;
+    height: 2px;
+    background-color:grey;
+    margin: 8px;
+    border-radius: 30px;
+}
+
 #signup {
-    color: var(--light);
+    position: absolute;
+    right: 15px;
+    top: 27px;
+    color: var(--grey);
     padding: 8px;
     text-decoration: none;
     font-weight: bold;
@@ -130,7 +170,7 @@ form button:hover {
 .dark {
     display: flex;
     justify-content: center;
-    padding: 100px 300px;
+    padding: 96px 0px;
     align-items: start;
     background-color: var(--darkblue);
     color: white;
@@ -150,7 +190,13 @@ form button:hover {
     height: 96px;
 }
 
-.description {
+.descriptionOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descriptionTwo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,18 +205,18 @@ form button:hover {
 .right {
     display: flex;
     flex-direction: column;
-    width: 555px;
     max-width: 570px;
     padding: 0px 15px;
+    flex-grow: 1;
 }
 
 .left {
     display: flex;
     flex-direction: column;
-    width: 555px;
     max-width: 570px;
     text-align: right;
     padding: 0px 15px;
+    flex-grow: 1;
 }
 
 .line {
@@ -178,14 +224,15 @@ form button:hover {
 }
 
 .leftText {
-    max-width: 540px;
+    font-family: var(--lato);
+    max-width: 634px;
     padding: 0px 15px;
     flex-grow: 1;
 }
 
 .rightText {
     font-family: var(--lato);
-    max-width: 540px;
+    max-width: 445px;
     padding: 0px 15px;
     flex-grow: 1;
 }
@@ -389,5 +436,75 @@ form button:hover {
 #medias a {
     flex-grow: 1;
     padding: 10px 12px;
+    text-decoration: none;
 }
 
+@media (max-width: 1046px) {
+
+    .nav {
+        justify-content: space-between;
+    }
+
+    .logo {
+        padding: 6px 0px;
+    }
+
+    .dark {
+        padding: 48px 0px;
+        text-align: center;
+    }
+
+    .navMother {
+        flex-direction: column;
+        align-content: flex-start;
+    }
+
+    .nav, ul{
+        flex-direction: column;
+    }
+
+    ul li {
+        display: none;
+        padding: 7.5px 0px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .rightText {
+        display: none;
+    }
+
+    .descriptionOne {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .descriptionOne .right {
+        order: -1;
+    }
+
+    .descriptionTwo {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .right, .left {
+        text-align: left;
+        flex-grow: unset;
+    }
+
+    .cite {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .identity {
+        order: 1;
+    }
+}

@@ -11,14 +11,27 @@
 </head>
 <body>
     <header> 
-        <nav>
-            <ul>
-                <li><a href="#" target="_self"><img src="img/logo_horiz_branco_full.png" alt=""></a></li>
-                <li><a href="#" target="_self" rel="next">aprenda</a></li>
-                <li><a href="#" target="_self" rel="next">ao vivo</a></li>
-                <li><a href="#" target="_self" rel="next">blog</a></li>
-            </ul>
-            <a id="signup" href="#" target="_self">cadastre-se</a>
+        <nav class="navMother">
+            <div class="nav">
+                <a href="#" target="_self"><img class="logo" src="img/logo_horiz_branco_full.png" alt=""></a>
+                <button class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <ul>
+                    <div class="links">
+                        <div class="linkBox">
+                            <li><a href="#" target="_self" rel="next">aprenda</a></li>
+                            <li><a href="#" target="_self" rel="next">ao vivo</a></li>
+                            <li><a href="#" target="_self" rel="next">blog</a></li>
+                        </div>
+                        <div class="signupBox">
+                            <li><a id="signup" href="#" target="_self">cadastre-se</a></li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
@@ -26,53 +39,57 @@
             <div class="dark">
                 <div class="leftText">
                     <h1 id="mainTitle">Onde <span id="traders">traders consistentes</span> se encontram</h1>
-                    <p id="mainParagraph">Estudamos mais de 300 mil traders para criar um sistema educacional completo, que te ensina a melhorar seus resultados e a operar na Bolsa com mais segurança.</p>
+                    <p id="mainParagraph">Estudamos mais de 300 mil traders para criar um <strong>sistema educacional completo</strong>, que te ensina a melhorar seus resultados e a operar na Bolsa com mais segurança.</p>
                 </div>
                 <div class="rightText">
                     <div id="access">
-                        <div id="optionalContent">
-                            <p>Comece seus cursos gratuitos</p>
+                        <div class="firstForm">
+                            <div id="optionalContent">
+                                <p>Comece seus cursos gratuitos</p>
+                            </div>
+                            <hr class="line">
+                            <p >Entre com sua rede social favorita:</p><br>
+                            <div id="medias">
+                                <a id="facebook" href="#" target="_blank" rel="external"><i class="fa-brands fa-facebook-square"></i>Facebook</a>
+                                <a id="google" href="#" target="_blank" rel="external"><i class="fa-brands fa-google"></i>Google</a>
+                            </div>
+                            <div class="simpleDiv">
+                                <p class="smallText">...Ou com seu email:</p>
+                            </div>
+                            <form action="#">
+                                <label><span class="labelForm">Nome</span><input class="input" type="text" placeholder="Como você se chama?"></input></label>
+                                <label><span class="labelForm">E-mail</span><input class="input" type="text" placeholder="Coloque aqui seu melhor email..."></input></label>
+                                <label><span class="labelForm">Senha</span><input class="input" type="password" placeholder="Escolha sua senha..."></input></label>
+                                <button>começar cursos grátis</button>
+                            </form>
+                            <div class="simpleDiv">
+                                <p class="smallText">Já é cadastrado?</p>
+                                <a class="simpleLink" href="#" target="_self">Faça login</a>
+                            </div>
                         </div>
-                        <hr class="line">
-                        <p >Entre com sua rede social favorita:</p><br>
-                        <div id="medias">
-                            <a id="facebook" href="#" target="_blank" rel="external"><i class="fa-brands fa-facebook-square"></i>Facebook</a>
-                            <a id="google" href="#" target="_blank" rel="external"><i class="fa-brands fa-google"></i>Google</a>
-                        </div>
-                        <div class="simpleDiv">
-                            <p class="smallText">...Ou com seu email:</p>
-                        </div>
-                        <form action="#">
-                            <label><span class="labelForm">Nome</span><input class="input" type="text" placeholder="Como você se chama?"></input></label>
-                            <label><span class="labelForm">E-mail</span><input class="input" type="text" placeholder="Coloque aqui seu melhor email..."></input></label>
-                            <label><span class="labelForm">Senha</span><input class="input" type="password" placeholder="Escolha sua senha..."></input></label>
-                            <button>começar cursos grátis</button>
-                        </form>
-                        <div class="simpleDiv">
-                            <p class="smallText">Já é cadastrado?</p>
-                            <a class="simpleLink" href="#" target="_self">Faça login</a>
-                        </div>
-                        <div class="simpleDiv">
-                            <p id="welcome">Olá, trader!</p>
-                        </div>
-                        <form action="#">
-                            <label><span class="labelForm">E-mail</span><input class="input" type="text" placeholder="Coloque aqui seu melhor email..."></input></label>
-                            <label><span class="labelForm">Senha</span><input class="input" type="password" placeholder="Escolha sua senha..."></input></label>
-                            <button>entrar com email</button>
-                        </form>
-                        <div id="lostPassword">
-                            <a href="#" target="_self" rel="next">Esqueceu sua senha?</a>
-                        </div>
-                        <div class="simpleDiv">
-                            <p class="smallText">Ainda não se cadastrou?</p>
-                            <a href="#" target="self" rel="">Clique Aqui</a>
+                        <div class="secondForm">
+                            <div class="simpleDiv">
+                                <p id="welcome">Olá, trader!</p>
+                            </div>
+                            <form action="#">
+                                <label><span class="labelForm">E-mail</span><input class="input" type="text" placeholder="Coloque aqui seu melhor email..."></input></label>
+                                <label><span class="labelForm">Senha</span><input class="input" type="password" placeholder="Escolha sua senha..."></input></label>
+                                <button>entrar com email</button>
+                            </form>
+                            <div id="lostPassword">
+                                <a href="#" target="_self" rel="next">Esqueceu sua senha?</a>
+                            </div>
+                            <div class="simpleDiv">
+                                <p class="smallText">Ainda não se cadastrou?</p>
+                                <a href="#" target="self" rel="">Clique Aqui</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="transition"></div>
             <div class="light">
-                <div class="description">
+                <div class="descriptionOne">
                     <div class="left">
                         <div class="smallTitle">
                             <h2 >Aprenda as <ins>melhores</ins> técnicas</h2>
@@ -99,9 +116,9 @@
                 </div>
             </div>
             <div class="grey">
-                <div class="description">
+                <div class="descriptionTwo">
                     <div class="left">
-                        <img src="img/aprenda-screens.png" alt="">
+                        <img src="img/aprenda-screens.png" alt="Aprenda Conosco">
                     </div>
                     <div class="right">
                         <div class="smallTitle">
