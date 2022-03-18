@@ -30,13 +30,23 @@ header {
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     text-transform: uppercase;
+    
 }
 
 nav {
     display: flex;
+    margin: auto;
     padding: 8px 16px;
     align-items: center;
     justify-content: center;
+}
+
+.hamburger div{
+    width: 32px;
+    height: 2px;
+    background-color:grey;
+    margin: 8px;
+    border-radius: 30px;
 }
 
 ul {
@@ -46,32 +56,38 @@ ul {
     justify-content: space-around;
 }
 
-ul a {
+.links {
+    display: flex;
+}
+
+.links * a:hover {
+    color: white;
+}
+
+.links__main {
+    display: flex;
+}
+
+.links__item {
     text-decoration: none;
     transition-duration: 0.15s;
     color: var(--grey);
     padding: 23px;
 }
 
-a:hover {
+#links__signup {
+    position: absolute;
+    right: 15px;
+    top: 27px;
+    color: var(--grey);
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.15s;
+}
+
+#links__signup:hover {
     color: white;
-}
-
-.links {
-    display: flex;
-}
-
-.linkBox {
-    display: flex;
-}
-
-.nav {
-    display: flex;
-    margin: auto;
-    align-items: center;
-}
-.secondForm {
-    display: none;
 }
 
 .hamburger {
@@ -85,30 +101,6 @@ a:hover {
     top: 20px;
     display: none;
 }
-
-.hamburger div {
-    width: 32px;
-    height: 2px;
-    background-color:grey;
-    margin: 8px;
-    border-radius: 30px;
-}
-
-#signup {
-    position: absolute;
-    right: 15px;
-    top: 27px;
-    color: var(--grey);
-    padding: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition-duration: 0.15s;
-}
-
-#signup:hover {
-    color: white;
-}
-
 
 /* MAIN SELECTORS */
 
@@ -157,7 +149,22 @@ form button:hover {
     background-color: var(--orange);
 }
 
-.input {
+.second-form {
+    display: none;
+    transition-duration: 2s;
+}
+
+.form {
+    display: none;
+    transition: opacity 2s ease-in-out;
+}
+
+.form.is-active {
+    display: block;
+    opacity: 1;
+}
+
+.inputs__item {
     flex-grow: 1;
     font-size: 16px;
     width: 70px;
@@ -190,13 +197,13 @@ form button:hover {
     height: 96px;
 }
 
-.descriptionOne {
+.description-one {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.descriptionTwo {
+.description-two {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -219,25 +226,30 @@ form button:hover {
     flex-grow: 1;
 }
 
-.line {
+#optional-content__title {
+    color: white;
+    font-size: 24px;
+}
+
+.optional-content__line {
     color: var(--light);
 }
 
-.leftText {
+.prasentation {
     font-family: var(--lato);
     max-width: 634px;
     padding: 0px 15px;
     flex-grow: 1;
 }
 
-.rightText {
+.begin {
     font-family: var(--lato);
     max-width: 445px;
     padding: 0px 15px;
     flex-grow: 1;
 }
 
-.labelForm {
+.inputs__label-form {
     display: block;
     background-color: var(--light);
     color: #000000;
@@ -248,11 +260,11 @@ form button:hover {
     border-radius: 0.25rem;
 }
 
-.smallTitle {
+.small-title {
     padding: 24px 0px;
 }
 
-.smallTitle h2 {
+.small-title h2 {
     font-size: 32px;
     margin-bottom: 8px;
     font-family: var(--montserrat);
@@ -260,11 +272,11 @@ form button:hover {
     text-transform: uppercase;
 }
 
-.smallDescription {
+.small-description {
     margin-bottom: 16px;
 }
 
-.smallDescription p {
+.small-description p {
     font-family: var(--lato);
     font-size: 19px;
     margin-bottom: 16px;
@@ -278,7 +290,7 @@ form button:hover {
     padding: 16px;
     margin-bottom: 16px;
 }
-.identity {
+.cite__identity {
     display: flex;
     justify-content: flex-start;
     padding-left: 8px;
@@ -287,14 +299,14 @@ form button:hover {
     font-family: var(--lato);
 } 
 
-.identity img {
+.cite__identity img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin-bottom: 8px;
 }
 
-.name {
+.cite__name {
     font-family: var(--lato);
     font-size: 16px;
 }
@@ -307,18 +319,13 @@ form button:hover {
     font-style: italic;
 }
 
-.smallText {
-    margin-bottom: 16px;
+.small-text {
+    align-items: center;
 }
 
-.simpleDiv {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.descriptionButton {  
+.description-button {  
     color: white;
+    cursor: pointer;
     height: 50px;
     border: none;
     border-radius: 25px;
@@ -347,11 +354,17 @@ form button:hover {
     background-color: var(--red);
 }
 
-.simpleLink {
+.optional-content__link {
     text-decoration: underline;
+    padding-left: 5px;
+    transition-duration: 0.15s;
 }
 
-#lostPassword {
+.optional-content__link:hover {
+    color: white;
+}
+
+#lost-password {
     margin-bottom: 25px;
 }
 
@@ -359,7 +372,7 @@ form button:hover {
     font-size: 20px;
 }
 
-#mainTitle {
+.prasentation__title {
     color:white;
     font-family: var(--montserrat);
     font-size: 64px;
@@ -367,12 +380,12 @@ form button:hover {
     margin-bottom: 16px;
 }
 
-#traders {
+#presentation__traders {
     color: var(--cyan);
     font-weight: bold;
 }
 
-#mainParagraph {
+.prasentation__paragraph {
     font-size: 28px;
     margin-bottom: 6px;
 }
@@ -392,7 +405,7 @@ form button:hover {
     text-align: center;
 }
 
-#facebook {
+#medias__facebook {
     background-color: var(--lightblue);
     margin-right: 3px;
     transition-duration: 0.5s;
@@ -401,12 +414,12 @@ form button:hover {
     text-transform: uppercase;
 }
 
-#facebook:hover {
+#medias__facebook:hover {
     background-color: var(--blue);
     text-decoration: underline;
 }
 
-#google {
+#medias__google {
     background-color: var(--orange);
     margin-left: 3px;
     transition-duration: 0.5s;
@@ -415,12 +428,24 @@ form button:hover {
     text-transform: uppercase;
 }
 
-#google:hover {
+#medias__google:hover {
     background-color: var(--red);
     text-decoration: underline;
 }
 
-#optionalContent {
+.optional-content {
+    margin: 0px 0px 10px 0px;
+    font-family: var(--lato);
+    font-weight: normal;
+    text-align: center;
+}
+
+.optional-content--flex {
+    display: flex;
+    justify-content: center;
+}
+
+#optional-content__text {
     margin: none;
     font-size: 24px;
     font-family: var(--lato);
@@ -430,7 +455,7 @@ form button:hover {
 
 #medias {
     display: flex;
-    margin-bottom: 10px;
+    margin: 0px 0px 10px 0px;
 }
 
 #medias a {
@@ -454,7 +479,7 @@ form button:hover {
         text-align: center;
     }
 
-    .navMother {
+    .nav-mother {
         flex-direction: column;
         align-content: flex-start;
     }
@@ -464,28 +489,47 @@ form button:hover {
     }
 
     ul li {
-        display: none;
         padding: 7.5px 0px;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .links__main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .linkBox {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #links__signup {
+        position: unset;
     }
 
     .hamburger {
         display: block;
     }
 
-    .rightText {
+    .begin {
         display: none;
     }
 
-    .descriptionOne {
+    .description-one {
         display: flex;
         flex-direction: column;
     }
 
-    .descriptionOne .right {
+    .description-one .right {
         order: -1;
     }
 
-    .descriptionTwo {
+    .description-two {
         display: flex;
         flex-direction: column;
     }
